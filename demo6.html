@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR0X9FBDTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PR0X9FBDTH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Engine Studio - AI Engineering Singapore</title>
+<meta name="description" content="Code Engine Studio - AI engineering in Singapore. 11 years in professional technology services, deploying enterprise AI models in your environment, PDPA-compliant by design.">
+<link rel="canonical" href="https://cestudio.ai/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cestudio.ai/">
+<meta property="og:title" content="Code Engine Studio - AI Engineering Singapore">
+<meta property="og:description" content="Your team is using AI. Your business isn't. We put a system around it, so AI works for the whole business.">
+<meta property="og:image" content="https://cestudio.ai/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Code Engine Studio - AI Engineering Singapore">
+<meta name="twitter:description" content="Your team is using AI. Your business isn't. We put a system around it.">
+<meta name="twitter:image" content="https://cestudio.ai/assets/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Code Engine Studio",
+  "url": "https://cestudio.ai/",
+  "logo": "https://cestudio.ai/assets/logo.png",
+  "description": "AI engineering in Singapore. Enterprise AI models deployed in your environment, PDPA-compliant by design.",
+  "email": "newbusiness@codeenginestudio.com",
+  "address": { "@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore" }
+}
+</script>
+
+<style>
+  :root {
+    --bg:        #050505;
+    --card:      #0C0D11;
+    --card-2:    #101116;
+    --ink:       #F4F4F1;
+    --muted:     #8B8C95;
+    --hair:      rgba(255,255,255,0.08);
+    --hair-soft: rgba(255,255,255,0.05);
+    --orange:    #F15927;
+    --orange-2:  #FF6E3C;
+    --teal:      #15B8CC;
+    --ease:      cubic-bezier(0.32,0.72,0,1);
+    --max:       1200px;
+    --shell-r:   2rem;
+    --core-r:    calc(2rem - 0.375rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    background: var(--bg); color: var(--ink);
+    line-height: 1.6; -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; position: relative;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.03em; line-height: 1.0; font-weight: 600; }
+
+  /* ── ambient mesh orbs (brand orange + teal, OLED black) ── */
+  .mesh { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+  .orb { position: absolute; border-radius: 50%; filter: blur(120px); opacity: .22; }
+  .orb.a { width: 620px; height: 620px; background: var(--orange); top: -160px; left: -120px; }
+  .orb.b { width: 560px; height: 560px; background: var(--teal); bottom: -180px; right: -120px; opacity: .16; }
+  /* fixed film-grain (pointer-events none) */
+  .grain { position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0.04; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  main, nav, footer { position: relative; z-index: 1; }
+
+  /* ── eyebrow pill (skill-mandated) ── */
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: .5rem;
+    border-radius: 999px; padding: .35rem .85rem;
+    background: rgba(241,89,39,0.10); border: 1px solid rgba(241,89,39,0.22);
+    font-size: 10.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--orange-2);
+  }
+  .eyebrow .pdot { width: 5px; height: 5px; border-radius: 50%; background: var(--orange); }
+
+  /* ── buttons: pill + button-in-button + magnetic ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: .75rem;
+    border-radius: 999px; font-weight: 600; font-size: 15px;
+    padding: .55rem .55rem .55rem 1.4rem; border: 1px solid transparent; cursor: pointer;
+    transition: transform .5s var(--ease), background .5s var(--ease), box-shadow .5s var(--ease);
+  }
+  .btn .ico {
+    width: 2rem; height: 2rem; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center;
+    transition: transform .5s var(--ease), background .5s var(--ease);
+    flex-shrink: 0;
+  }
+  .btn-primary { background: var(--orange); color: #0a0a0a; box-shadow: 0 10px 40px -12px rgba(241,89,39,0.55); }
+  .btn-primary .ico { background: rgba(0,0,0,0.14); }
+  .btn-primary:hover { background: var(--orange-2); transform: translateY(-2px); }
+  .btn-primary:hover .ico { transform: translate(3px,-1px) scale(1.06); }
+  .btn-primary:active { transform: scale(0.98); }
+  .btn-ghost { background: rgba(255,255,255,0.04); color: var(--ink); border-color: var(--hair); padding: .55rem 1.4rem; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+  /* ── double-bezel shell ── */
+  .shell {
+    background: rgba(255,255,255,0.04); border: 1px solid var(--hair);
+    border-radius: var(--shell-r); padding: 0.375rem;
+  }
+  .core {
+    background: var(--card); border-radius: var(--core-r); height: 100%;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.10);
+    overflow: hidden;
+  }
+  .core-pad { padding: 2.25rem; }
+
+  /* ── NAV: floating glass pill + hamburger morph ── */
+  nav { position: sticky; top: 0; z-index: 50; padding-top: 1.5rem; pointer-events: none; }
+  .nav-pill {
+    pointer-events: auto;
+    max-width: 1080px; margin: 0 auto; width: calc(100% - 3rem);
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: .55rem .65rem .55rem 1.4rem; border-radius: 999px;
+    background: rgba(12,13,17,0.62); backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid var(--hair); box-shadow: 0 20px 50px -24px rgba(0,0,0,0.8);
+  }
+  .nav-logo img { height: 26px; width: auto; }
+  .nav-links { display: flex; gap: 1.85rem; align-items: center; }
+  .nav-link { font-size: 14px; font-weight: 500; color: var(--muted); transition: color .4s var(--ease); }
+  .nav-link:hover { color: var(--ink); }
+  .nav-right { display: flex; align-items: center; gap: .75rem; }
+  .nav-toggle { display: none; width: 42px; height: 42px; border-radius: 999px; border: 1px solid var(--hair); background: rgba(255,255,255,0.04); cursor: pointer; position: relative; }
+  .nav-toggle span { position: absolute; left: 11px; width: 20px; height: 1.5px; background: var(--ink); transition: transform .5s var(--ease), opacity .3s var(--ease); }
+  .nav-toggle span:nth-child(1) { top: 16px; }
+  .nav-toggle span:nth-child(2) { top: 24px; }
+  body.menu-open .nav-toggle span:nth-child(1) { transform: translateY(4px) rotate(45deg); }
+  body.menu-open .nav-toggle span:nth-child(2) { transform: translateY(-4px) rotate(-45deg); }
+
+  /* full-screen glass overlay menu */
+  .nav-overlay {
+    position: fixed; inset: 0; z-index: 45; pointer-events: none; opacity: 0;
+    background: rgba(5,5,5,0.80); backdrop-filter: blur(28px);
+    display: flex; flex-direction: column; justify-content: center; padding: 2rem 2.5rem;
+    transition: opacity .5s var(--ease);
+  }
+  body.menu-open .nav-overlay { pointer-events: auto; opacity: 1; }
+  .nav-overlay a { font-family: 'Space Grotesk'; font-size: clamp(2rem,9vw,3.2rem); font-weight: 500; color: var(--ink); padding: .35rem 0;
+    opacity: 0; transform: translateY(48px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+  body.menu-open .nav-overlay a { opacity: 1; transform: none; }
+  body.menu-open .nav-overlay a:nth-child(1) { transition-delay: .10s; }
+  body.menu-open .nav-overlay a:nth-child(2) { transition-delay: .16s; }
+  body.menu-open .nav-overlay a:nth-child(3) { transition-delay: .22s; }
+  body.menu-open .nav-overlay a:nth-child(4) { transition-delay: .28s; }
+  body.menu-open .nav-overlay a:nth-child(5) { transition-delay: .34s; }
+
+  /* ── SECTION SCAFFOLD (heavy breathing room) ── */
+  .sec { padding: clamp(6rem, 12vw, 11rem) 0; }
+  .sec-head { max-width: 760px; margin-bottom: 4rem; }
+  .sec-head h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); margin-top: 1.25rem; }
+  .lead { color: var(--muted); font-size: 1.08rem; max-width: 58ch; margin-top: 1.25rem; }
+
+  /* ── HERO ── */
+  .hero { min-height: 100dvh; display: flex; align-items: center; padding: 9rem 0 4rem; }
+  .hero-grid { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: 2.5rem; align-items: center; width: 100%; }
+  .hero h1 { font-size: clamp(2.1rem, 3.8vw, 3.1rem); font-weight: 700; margin: 1.75rem 0; }
+  .hero h1 .grad { background: linear-gradient(110deg, var(--orange), var(--orange-2) 60%, var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero .lead { font-size: 1.2rem; max-width: 42ch; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2.5rem; }
+  .hero-media .core { padding: 0; }
+  .hero-media img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/4.6; filter: saturate(1.05) contrast(1.02); }
+  .hero-media { position: relative; }
+  .hero-badge {
+    position: absolute; left: -1.5rem; bottom: 2rem; z-index: 3;
+    background: rgba(12,13,17,0.72); backdrop-filter: blur(18px);
+    border: 1px solid var(--hair); border-radius: 1.25rem; padding: 1rem 1.25rem;
+    box-shadow: 0 24px 60px -28px rgba(0,0,0,0.9);
+  }
+  .hero-badge .n { font-family: 'Space Grotesk'; font-size: 1.9rem; font-weight: 700; color: var(--orange-2); line-height: 1; }
+  .hero-badge .l { font-size: 12px; color: var(--muted); margin-top: .35rem; }
+
+  /* ── TICKER ── */
+  .ticker { overflow: hidden; border-top: 1px solid var(--hair-soft); border-bottom: 1px solid var(--hair-soft); }
+  .ticker-track { display: flex; width: max-content; animation: scroll 30s linear infinite; }
+  .ticker:hover .ticker-track { animation-play-state: paused; }
+  .ticker-item { font-size: 14px; font-weight: 500; color: var(--muted); padding: 1.1rem 2.25rem; white-space: nowrap; display: flex; gap: .9rem; }
+  .ticker-item .s { color: var(--orange); }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── BENTO grids ── */
+  .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+  .b-feature { grid-column: span 7; }
+  .b-side    { grid-column: span 5; }
+  .b-half    { grid-column: span 6; }
+  .b-third   { grid-column: span 4; }
+  .bento .shell { height: 100%; }
+
+  .icoline { color: var(--orange-2); margin-bottom: 1.5rem; }
+  .card-q { font-family: 'Space Grotesk'; font-size: 1.4rem; font-weight: 500; line-height: 1.2; }
+  .card-q.big { font-size: clamp(1.6rem,2.6vw,2.2rem); }
+  .card-tag { font-size: 11px; text-transform: uppercase; letter-spacing: .16em; color: var(--muted); margin-bottom: 1rem; }
+  .core-pad h3 { font-size: 1.45rem; margin-bottom: .7rem; }
+  .core-pad p { color: var(--muted); font-size: 15px; }
+  .prob-close { margin-top: 2.5rem; font-family: 'Space Grotesk'; font-size: clamp(1.3rem,2.4vw,1.7rem); font-weight: 500; max-width: 42ch; }
+  .prob-close b { color: var(--orange-2); font-weight: 600; }
+
+  /* solution feature panel highlight */
+  .sol-fill .core { background: linear-gradient(150deg, rgba(241,89,39,0.16), rgba(21,184,204,0.08)), var(--card); }
+  .tag-link { margin-top: 1.75rem; font-size: 13px; font-weight: 600; color: var(--orange-2); display: inline-flex; gap: .5rem; }
+
+  /* ── AIDE ── */
+  .aide-letter { font-family: 'Space Grotesk'; font-size: 3rem; font-weight: 700; line-height: 1;
+    background: linear-gradient(160deg, var(--orange-2), var(--teal)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .aide-word { font-size: 11px; text-transform: uppercase; letter-spacing: .18em; color: var(--muted); display: block; margin: .7rem 0 .9rem; }
+
+  /* ── WHO ── */
+  .who-list { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .who-item { display: grid; grid-template-columns: 2rem 1fr; gap: 1rem; align-items: start; }
+  .who-num { color: var(--orange-2); font-family: 'Space Grotesk'; font-weight: 600; }
+  .who-item p { color: var(--ink); font-size: 1.02rem; }
+  .who-close { margin-top: 2.75rem; font-family: 'Space Grotesk'; font-size: 1.35rem; font-weight: 500; }
+  .who-close i { color: var(--orange-2); }
+
+  /* ── RESULTS ── */
+  .result-metric { font-family: 'Space Grotesk'; font-size: clamp(2.8rem,5.5vw,4.4rem); font-weight: 700; line-height: .92;
+    background: linear-gradient(120deg, var(--orange), var(--orange-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .result-metric small { display: block; font-family: 'Plus Jakarta Sans'; font-size: 14px; font-weight: 500; color: var(--muted); margin-top: 1rem; -webkit-text-fill-color: var(--muted); }
+  .result-meta { font-size: 12.5px; color: var(--muted); letter-spacing: .04em; margin-top: .4rem; }
+
+  /* ── FAQ ── */
+  details.faq { background: var(--card); border-radius: var(--core-r); box-shadow: inset 0 1px 1px rgba(255,255,255,0.10); overflow: hidden; }
+  details.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; align-items: center;
+    padding: 1.6rem 2rem; font-family: 'Space Grotesk'; font-size: 1.12rem; font-weight: 500; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq .plus { color: var(--orange-2); font-size: 1.5rem; transition: transform .5s var(--ease); flex-shrink: 0; }
+  details.faq[open] .plus { transform: rotate(135deg); }
+  details.faq p { color: var(--muted); padding: 0 2rem 1.7rem; max-width: 62ch; font-size: 15px; }
+  .faq-stack { display: grid; gap: 1rem; }
+
+  /* ── ABOUT ── */
+  .about-grid { display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 3rem; align-items: center; }
+  .about-grid p { font-size: 1.2rem; color: var(--muted); }
+  .about-grid p b { color: var(--ink); font-weight: 700; }
+  .stat-stack { display: grid; gap: 1rem; }
+  .stat .n { font-family: 'Space Grotesk'; font-size: 2.6rem; font-weight: 700; color: var(--ink); line-height: 1; }
+  .stat .l { font-size: 13px; color: var(--muted); margin-top: .5rem; }
+
+  /* ── CTA ── */
+  .cta .core { background: linear-gradient(150deg, rgba(241,89,39,0.18), rgba(21,184,204,0.08)), var(--card); text-align: center; }
+  .cta .core-pad { padding: clamp(3rem,7vw,5.5rem); }
+  .cta h2 { font-size: clamp(2rem,5vw,3.4rem); max-width: 18ch; margin: 1.25rem auto 1.25rem; }
+  .cta .lead { margin: 0 auto 2.5rem; }
+  .cta .email { display: block; margin-top: 1.75rem; font-size: 13.5px; color: var(--muted); }
+  .cta .email a { color: var(--orange-2); }
+
+  /* ── FOOTER ── */
+  footer { padding: 3rem 0; border-top: 1px solid var(--hair-soft); }
+  .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .footer-inner img { height: 24px; opacity: .55; }
+  .footer-inner small { font-size: 13px; color: var(--muted); }
+
+  /* ── SCROLL REVEAL (heavy fade-up + blur) ── */
+  .reveal { opacity: 0; transform: translateY(64px); filter: blur(10px); transition: opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; filter: blur(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .hero-grid, .about-grid { grid-template-columns: 1fr; }
+    .hero-media { order: -1; max-width: 460px; }
+    .hero-badge { left: 1rem; }
+    .b-feature, .b-side, .b-half, .b-third { grid-column: span 12; }
+    .who-list { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 1.25rem; }
+    .hero { padding-top: 7.5rem; }
+    .hero-actions { width: 100%; }
+    .hero-actions .btn { flex: 1; justify-content: center; }
+    .core-pad { padding: 1.6rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker-track { animation: none; }
+    .reveal { opacity: 1; transform: none; filter: none; transition: none; }
+    .btn, .btn .ico, .nav-overlay a, .nav-toggle span { transition: none; }
+    .nav-overlay a { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<div class="mesh"><span class="orb a"></span><span class="orb b"></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-pill">
+    <a href="#" class="nav-logo" aria-label="Code Engine Studio home"><img src="assets/logo.webp" alt="Code Engine Studio" width="104" height="26"></a>
+    <div class="nav-links">
+      <a href="#what-we-do" class="nav-link">Services</a>
+      <a href="#how-it-works" class="nav-link">Process</a>
+      <a href="#results" class="nav-link">Results</a>
+      <a href="#why-ces" class="nav-link">Why CES</a>
+      <a href="#about" class="nav-link">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'nav' })">Book a call <span class="ico" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- full-screen overlay menu -->
+<div class="nav-overlay" id="navOverlay">
+  <a href="#what-we-do" class="ov-link">Services</a>
+  <a href="#how-it-works" class="ov-link">Process</a>
+  <a href="#results" class="ov-link">Results</a>
+  <a href="#why-ces" class="ov-link">Why CES</a>
+  <a href="#about" class="ov-link">About</a>
+</div>
+
+<main>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow reveal"><span class="pdot"></span> AI Engineering &middot; Singapore</span>
+      <h1 class="reveal">Your team is using AI.<br><span class="grad">Your business isn't.</span></h1>
+      <p class="lead reveal">We put a system around it, so AI works for the whole business, not just whoever figured it out.</p>
+      <div class="hero-actions reveal">
+        <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'hero' })">Book a free call <span class="ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+        <a href="#what-we-do" class="btn btn-ghost">See how we work</a>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="shell">
+        <div class="core">
+          <picture>
+            <source srcset="assets/hero.webp" type="image/webp">
+            <img src="assets/hero.jpg" alt="Code Engine Studio team" width="1600" height="1200" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+      </div>
+      <div class="hero-badge"><div class="n">11 yrs</div><div class="l">in technology services</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ── TICKER ── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="s">/</span> 11 years in professional technology services</span>
+    <span class="ticker-item"><span class="s">/</span> Enterprise AI models, deployed in your environment</span>
+    <span class="ticker-item"><span class="s">/</span> PDPA-compliant by design</span>
+    <span class="ticker-item"><span class="s">/</span> 11 years in professional technology services</span>
+    <span class="ticker-item"><span class="s">/</span> Enterprise AI models, deployed in your environment</span>
+    <span class="ticker-item"><span class="s">/</span> PDPA-compliant by design</span>
+  </div>
+</div>
+
+<!-- ── PROBLEM (asymmetric bento) ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="pdot"></span> The problem</span>
+      <h2>Does any of this sound familiar?</h2>
+    </div>
+    <div class="bento">
+      <div class="b-feature reveal sol-fill">
+        <div class="shell"><div class="core core-pad">
+          <div class="card-tag">Ungoverned AI use</div>
+          <p class="card-q big">"My staff use ChatGPT, but I have no idea what they're putting into it."</p>
+        </div></div>
+      </div>
+      <div class="b-side reveal">
+        <div class="shell"><div class="core core-pad">
+          <div class="card-tag">No visible ROI</div>
+          <p class="card-q">"We've spent on AI tools and I can't point to what it's done for the business."</p>
+        </div></div>
+      </div>
+      <div class="b-third reveal">
+        <div class="shell"><div class="core core-pad">
+          <div class="card-tag">Inconsistent output</div>
+          <p class="card-q">"The quality depends on who's prompting and how good they are."</p>
+        </div></div>
+      </div>
+      <div class="b-side reveal" style="grid-column: span 8; display:flex; align-items:center;">
+        <p class="prob-close" style="margin-top:0;">The fix isn't a better tool. <b>It's a structured approach to where and how AI fits your business.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOLUTION (bento) ── -->
+<section id="what-we-do" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="pdot"></span> The solution</span>
+      <h2>Two ways we work with you.</h2>
+    </div>
+    <div class="bento">
+      <div class="b-half reveal sol-fill">
+        <div class="shell"><div class="core core-pad">
+          <div class="icoline"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h10M4 17h13"/><circle cx="19" cy="16" r="3"/></svg></div>
+          <h3>AI Workflows &amp; Assistants</h3>
+          <p>Purpose-built systems inside the tools your team already uses. AI that runs the same way every time, for everyone.</p>
+          <span class="tag-link">Deployed in weeks <span aria-hidden="true">&rarr;</span></span>
+        </div></div>
+      </div>
+      <div class="b-half reveal">
+        <div class="shell"><div class="core core-pad">
+          <div class="icoline"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5l-5 7 5 7M16 5l5 7-5 7"/></svg></div>
+          <h3>Custom AI Software</h3>
+          <p>Built for your specific needs, not bought off a shelf. Production-grade, and leaner than traditional development.</p>
+          <span class="tag-link">Built, not bought <span aria-hidden="true">&rarr;</span></span>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS / AIDE (bento) ── -->
+<section id="how-it-works" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our process for turning AI activity into business results.</h2>
+    </div>
+    <div class="bento">
+      <div class="b-third reveal"><div class="shell"><div class="core core-pad">
+        <div class="aide-letter">A</div><span class="aide-word">Assess</span>
+        <h3>Map the work</h3><p>We interview your team and map how work actually gets done.</p>
+      </div></div></div>
+      <div class="b-third reveal"><div class="shell"><div class="core core-pad">
+        <div class="aide-letter">I</div><span class="aide-word">Ideate</span>
+        <h3>Design first</h3><p>We design the solution and get your sign-off before building anything.</p>
+      </div></div></div>
+      <div class="b-third reveal"><div class="shell"><div class="core core-pad">
+        <div class="aide-letter">D</div><span class="aide-word">Develop</span>
+        <h3>Build and deploy</h3><p>We build and deploy inside the systems you already run.</p>
+      </div></div></div>
+      <div class="b-feature reveal" style="grid-column: span 12;"><div class="shell"><div class="core core-pad" style="display:flex; gap:2rem; align-items:center; flex-wrap:wrap;">
+        <div class="aide-letter" style="font-size:3.4rem;">E</div>
+        <div><span class="aide-word" style="margin-top:0;">Evolve</span><h3>Refine and expand</h3><p>We refine, optimize, and expand as your business grows. The system gets sharper the longer it runs.</p></div>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="pdot"></span> Who this is for</span>
+      <h2>Built for businesses ready to go from AI activity to AI results.</h2>
+    </div>
+    <div class="shell reveal"><div class="core core-pad" style="padding: clamp(2rem,4vw,3rem);">
+      <div class="who-list">
+        <div class="who-item"><span class="who-num">01</span><p>Your staff use AI, but there's no process or governance around it.</p></div>
+        <div class="who-item"><span class="who-num">02</span><p>You've spent on AI and can't point to results.</p></div>
+        <div class="who-item"><span class="who-num">03</span><p>You use AI personally, but your team hasn't adopted it.</p></div>
+        <div class="who-item"><span class="who-num">04</span><p>You're not sure whether the ROI is even there yet.</p></div>
+        <div class="who-item"><span class="who-num">05</span><p>You handle sensitive client data and can't use public AI.</p></div>
+      </div>
+      <p class="who-close">You don't need all five. <i>One is usually enough.</i></p>
+    </div></div>
+  </div>
+</section>
+
+<!-- ── RESULTS (bento) ── -->
+<section id="results" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="pdot"></span> Real work</span>
+      <h2>What this looks like in practice.</h2>
+    </div>
+    <div class="bento">
+      <div class="b-half reveal sol-fill"><div class="shell"><div class="core core-pad">
+        <div class="result-metric">2.5&times;<small>document volume handled by the same team</small></div>
+        <h3 style="margin-top:1.75rem;">Contract Intelligence</h3>
+        <p class="result-meta">Custom AI Software / In development</p>
+      </div></div></div>
+      <div class="b-half reveal"><div class="shell"><div class="core core-pad">
+        <div class="result-metric">90&rarr;10<small>minutes of research time per event</small></div>
+        <h3 style="margin-top:1.75rem;">Event Research</h3>
+        <p class="result-meta">AI Workflows &amp; Assistants / Claude, Excel</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY (asymmetric bento) ── -->
+<section id="why-ces" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow"><span class="pdot"></span> Why CES</span>
+      <h2>What makes us different.</h2>
+    </div>
+    <div class="bento">
+      <div class="b-feature reveal sol-fill"><div class="shell"><div class="core core-pad">
+        <div class="icoline"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Prove value before building</h3>
+        <p>We start by finding measurable business value, before a single line of code. No speculative projects, no AI for its own sake.</p>
+      </div></div></div>
+      <div class="b-side reveal"><div class="shell"><div class="core core-pad">
+        <div class="icoline"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V7a4 4 0 0 1 8 0v4"/><rect x="5" y="11" width="14" height="10" rx="2"/></svg></div>
+        <h3>No vendor lock-in</h3>
+        <p>Documentation and team onboarding come standard. The system stays yours.</p>
+      </div></div></div>
+      <div class="b-side reveal"><div class="shell"><div class="core core-pad">
+        <div class="icoline"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>PDPA-compliant</h3>
+        <p>Your data stays yours, governed by design and kept inside your environment.</p>
+      </div></div></div>
+      <div class="b-feature reveal"><div class="shell"><div class="core core-pad">
+        <div class="icoline"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></div>
+        <h3>We run what we build</h3>
+        <p>We use our own solutions every day. We don't ship anything we wouldn't rely on ourselves.</p>
+      </div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-stack reveal">
+      <div class="shell"><details class="faq">
+        <summary>We already have ChatGPT. Why do we need this? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>ChatGPT is a tool. We build the system around it, so output is consistent and governed across your whole team, not dependent on who happens to be prompting.</p>
+      </details></div>
+      <div class="shell"><details class="faq">
+        <summary>What happens to our client data? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>It stays in your environment. We deploy enterprise AI models you control, PDPA-compliant by design.</p>
+      </details></div>
+      <div class="shell"><details class="faq">
+        <summary>How long before we see results? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>Most workflow projects show measurable results in weeks, not months. We prove value early, before scaling.</p>
+      </details></div>
+      <div class="shell"><details class="faq">
+        <summary>What if our team doesn't actually use it? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>Adoption is the point. We build inside the tools they already use and onboard the team, so it sticks.</p>
+      </details></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="sec">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="pdot"></span> About us</span>
+      <h2 style="font-size:clamp(1.9rem,3.8vw,2.8rem); margin-top:1.25rem; margin-bottom:1.5rem;">A decade of building. Now engineering with AI.</h2>
+      <p>We've spent a decade delivering technology for businesses across 20+ countries, with one mission: <b>fuel real business growth.</b> Not as a vendor, but as a strategic partner. Now we're evolving into an AI engineering company.</p>
+    </div>
+    <div class="stat-stack reveal">
+      <div class="shell"><div class="core core-pad stat"><div class="n">11 years</div><div class="l">in professional technology services</div></div></div>
+      <div class="shell"><div class="core core-pad stat"><div class="n">100+</div><div class="l">completed projects</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section id="cta" class="sec cta">
+  <div class="wrap">
+    <div class="shell reveal"><div class="core core-pad">
+      <span class="eyebrow"><span class="pdot"></span> Let's talk</span>
+      <h2>Ready to see what AI can actually do for your business?</h2>
+      <p class="lead">Book a free 30-minute discovery call. If it's not the right fit, we'll tell you that too.</p>
+      <div style="display:flex; justify-content:center;">
+        <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'cta' })">Book a free call <span class="ico" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span></a>
+      </div>
+      <span class="email">Or email us at <a href="mailto:newbusiness@codeenginestudio.com">newbusiness@codeenginestudio.com</a></span>
+    </div></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="wrap footer-inner">
+    <img src="assets/logo.webp" alt="Code Engine Studio">
+    <small>&copy; <span id="year"></span> Code Engine Studio. Singapore.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var toggle = document.getElementById('navToggle');
+  var overlay = document.getElementById('navOverlay');
+  function closeMenu(){ document.body.classList.remove('menu-open'); toggle.setAttribute('aria-expanded','false'); }
+  toggle.addEventListener('click', function () {
+    var open = document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  overlay.addEventListener('click', function (e) { if (e.target.classList.contains('ov-link')) closeMenu(); });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+</script>
+</body>
+</html>
