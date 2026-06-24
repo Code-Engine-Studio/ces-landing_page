@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR0X9FBDTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PR0X9FBDTH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Engine Studio - AI Engineering Singapore</title>
+<meta name="description" content="Code Engine Studio - AI engineering in Singapore. 11 years in professional technology services, deploying enterprise AI models in your environment, PDPA-compliant by design.">
+<link rel="canonical" href="https://cestudio.ai/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cestudio.ai/">
+<meta property="og:title" content="Code Engine Studio - AI Engineering Singapore">
+<meta property="og:description" content="Your team is using AI. Your business isn't. We put a system around it, so AI works for the whole business.">
+<meta property="og:image" content="https://cestudio.ai/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Code Engine Studio - AI Engineering Singapore">
+<meta name="twitter:description" content="Your team is using AI. Your business isn't. We put a system around it.">
+<meta name="twitter:image" content="https://cestudio.ai/assets/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Code Engine Studio",
+  "url": "https://cestudio.ai/",
+  "logo": "https://cestudio.ai/assets/logo.png",
+  "description": "AI engineering in Singapore. Enterprise AI models deployed in your environment, PDPA-compliant by design.",
+  "email": "newbusiness@codeenginestudio.com",
+  "address": { "@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore" }
+}
+</script>
+
+<style>
+  /* ── TOKENS ── */
+  :root {
+    --orange:       #F15927;
+    --orange-btn:   #C2451C;   /* darkened orange, WCAG AA white text */
+    --orange-text:  #C64517;   /* accessible orange text on light */
+    --navy:         #273043;
+    --navy-dark:    #1A2030;
+    --ink:          #1B2030;
+    --canvas:       #F3F3F0;   /* cool light, distinct from warm demos */
+    --surface:      #FBFBF9;
+    --line:         #DBDBD4;
+    --line-strong:  #C7C7BE;
+    --teal:         #0892A5;
+    --muted:        #5E6473;
+    --white:        #FFFFFF;
+    --max:          1180px;
+    --pad:          2rem;
+    --r:            2px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--canvas);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* keyboard focus (a11y) */
+  :focus-visible { outline: 2px solid var(--orange-btn); outline-offset: 2px; }
+  a:focus-visible, .btn:focus-visible, summary:focus-visible, button:focus-visible { outline-offset: 3px; border-radius: var(--r); }
+
+  /* skip link */
+  .skip {
+    position: absolute; left: .5rem; top: -3rem; z-index: 100;
+    background: var(--ink); color: #fff; padding: .6rem 1rem;
+    border-radius: var(--r); font-size: 14px; font-weight: 600;
+    transition: top .15s ease;
+  }
+  .skip:focus { top: .5rem; }
+
+  /* subtle grain — breaks flat surfaces */
+  body::after {
+    content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none;
+    opacity: .035; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; line-height: 1.04; letter-spacing: -0.02em; font-weight: 600; text-wrap: balance; }
+
+  /* mono kicker (rationed: hero, solution, results only) */
+  .kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--orange-text);
+  }
+  .kicker.on-dark { color: var(--orange); }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: .55rem;
+    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 15px;
+    padding: .85rem 1.5rem; border-radius: var(--r);
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    cursor: pointer; border: 1.5px solid transparent; white-space: nowrap;
+  }
+  .btn-primary { background: var(--orange-btn); color: #fff; }
+  .btn-primary:hover { background: #a93b16; transform: translateY(-1px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+  .btn-ghost:hover { border-color: var(--ink); transform: translateY(-1px); }
+  .btn-arrow { transition: transform .15s ease; }
+  .btn:hover .btn-arrow { transform: translateX(3px); }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(243,243,240,0.82);
+    backdrop-filter: blur(14px) saturate(160%);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
+    height: 68px; display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: inline-flex; align-items: center; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-link { font-size: 14.5px; font-weight: 500; color: var(--muted); transition: color .15s; position: relative; }
+  .nav-link:hover { color: var(--ink); }
+  .nav-link.active { color: var(--ink); }
+  .nav-link.active::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -24px;
+    height: 2px; background: var(--orange);
+  }
+  .nav-right { display: flex; align-items: center; gap: 1.25rem; }
+  .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: .4rem; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; transition: .2s; }
+
+  /* ── SECTION SCAFFOLD ── */
+  section { position: relative; }
+  .sec-pad { padding: 6rem 0; }
+  .sec-head { max-width: 760px; margin-bottom: 3rem; }
+  .sec-head h2 { font-size: clamp(1.9rem, 4vw, 3rem); margin-top: .9rem; }
+  .lead { color: var(--muted); font-size: 1.05rem; max-width: 60ch; text-wrap: pretty; }
+
+  /* hairline blueprint divider */
+  .rule { border-top: 1px solid var(--line); }
+
+  /* ── HERO ── */
+  .hero { position: relative; border-bottom: 1px solid var(--line); }
+  .hero-grid {
+    max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 3.5rem; align-items: center;
+    min-height: calc(100dvh - 68px);
+  }
+  /* faint vertical blueprint lines behind hero text */
+  .hero-grid::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(to right, var(--line) 1px, transparent 1px);
+    background-size: 96px 100%;
+    background-position: var(--pad) 0;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+            mask-image: linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    opacity: .55;
+  }
+  .hero-copy { position: relative; z-index: 1; padding: 4rem 0; }
+  .hero-copy h1 {
+    font-size: clamp(2.6rem, 5.5vw, 4.6rem); margin: 1.1rem 0 1.4rem;
+    font-weight: 700;
+  }
+  .hero-copy h1 .accent { color: var(--orange-text); }
+  .hero-copy .lead { font-size: 1.15rem; max-width: 46ch; margin-bottom: 2rem; }
+  .hero-actions { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .hero-media { position: relative; z-index: 1; }
+  .hero-media .frame {
+    position: relative; border: 1px solid var(--line-strong); border-radius: var(--r);
+    overflow: hidden; background: var(--surface);
+  }
+  .hero-media .frame img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3.4; }
+  /* corner ticks (blueprint registration marks) */
+  .tick { position: absolute; width: 12px; height: 12px; z-index: 2; }
+  .tick::before, .tick::after { content: ""; position: absolute; background: var(--orange); }
+  .tick::before { width: 12px; height: 2px; top: 0; }
+  .tick::after  { width: 2px; height: 12px; left: 0; }
+  .tick.tl { top: -1px; left: -1px; }
+  .tick.br { bottom: -1px; right: -1px; transform: rotate(180deg); }
+
+  /* ── TICKER / MARQUEE (the one allowed marquee) ── */
+  .ticker { background: var(--navy); color: #fff; border-bottom: 1px solid var(--line); overflow: hidden; }
+  .ticker-track { display: flex; gap: 0; width: max-content; animation: scroll 26s linear infinite; }
+  .ticker:hover .ticker-track { animation-play-state: paused; }
+  .ticker-item { display: flex; align-items: center; gap: .8rem; padding: .95rem 2.25rem; font-size: 14px; font-weight: 500; white-space: nowrap; }
+  .ticker-item .dot { color: var(--orange); font-family: 'IBM Plex Mono', monospace; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── PROBLEM (asymmetric: 1 featured + 2) ── */
+  .prob-feature {
+    border: 1px solid var(--line-strong); border-radius: var(--r);
+    padding: 2.5rem; background: var(--surface); margin-bottom: 1.25rem;
+  }
+  .prob-feature .q { font-family: 'Space Grotesk'; font-size: clamp(1.4rem,2.6vw,2rem); font-weight: 500; max-width: 22ch; }
+  .prob-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .prob-card { border: 1px solid var(--line); border-radius: var(--r); padding: 2rem; background: var(--surface); }
+  .prob-card .q { font-family: 'Space Grotesk'; font-size: 1.25rem; font-weight: 500; margin-bottom: 0; }
+  .prob-label { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--orange-text); letter-spacing: .08em; margin-bottom: 1rem; }
+  .prob-close { margin-top: 2.25rem; font-size: 1.25rem; font-family: 'Space Grotesk'; font-weight: 500; max-width: 40ch; }
+  .prob-close b { color: var(--orange-text); font-weight: 600; }
+
+  /* ── SOLUTION (2 big panels, one navy) ── */
+  .sol-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .sol-panel { border-radius: var(--r); padding: 2.75rem; display: flex; flex-direction: column; min-height: 340px; }
+  .sol-light { background: var(--surface); border: 1px solid var(--line-strong); }
+  .sol-dark { background: var(--navy); color: #fff; border: 1px solid var(--navy); }
+  .sol-panel .num { font-family: 'IBM Plex Mono', monospace; font-size: 13px; opacity: .6; }
+  .sol-panel h3 { font-size: 1.7rem; margin: .8rem 0 1rem; }
+  .sol-panel p { color: var(--muted); margin-bottom: auto; }
+  .sol-dark p { color: #B6BCCB; }
+  .sol-panel .tag { margin-top: 1.75rem; font-size: 13px; font-weight: 600; color: var(--orange-text); display: inline-flex; align-items: center; gap: .4rem; }
+  .sol-dark .tag { color: var(--orange); }
+
+  /* ── PROCESS (AIDE 4-step grid) ── */
+  .aide { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line-strong); border-radius: var(--r); overflow: hidden; }
+  .aide-step { padding: 2.25rem 1.75rem; border-right: 1px solid var(--line); background: var(--surface); position: relative; }
+  .aide-step:last-child { border-right: 0; }
+  .aide-letter { font-family: 'Space Grotesk'; font-size: 3.4rem; font-weight: 700; color: var(--orange); line-height: 1; }
+  .aide-step h3 { font-size: 1.2rem; margin: 1rem 0 .6rem; }
+  .aide-step p { font-size: 14.5px; color: var(--muted); }
+  .aide-word { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+
+  /* ── WHO (5 signals, 2-col) ── */
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+  .who-item { display: flex; gap: 1.1rem; padding: 1.4rem 0; border-top: 1px solid var(--line); align-items: flex-start; }
+  .who-num { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--orange-text); padding-top: .15rem; min-width: 26px; }
+  .who-item p { font-size: 1.05rem; }
+  .who-close { margin-top: 2.5rem; font-family: 'Space Grotesk'; font-size: 1.3rem; font-weight: 500; }
+
+  /* ── RESULTS (navy band, big numbers) ── */
+  .band-dark { background: var(--navy); color: #fff; border-top: 1px solid var(--navy-dark); border-bottom: 1px solid var(--navy-dark); }
+  .band-dark .lead { color: #B6BCCB; }
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .result-card { border: 1px solid #38415A; border-radius: var(--r); padding: 2.5rem; background: #1F2738; }
+  .result-metric { font-family: 'Space Grotesk'; font-size: clamp(2.6rem, 5vw, 3.8rem); font-weight: 700; color: var(--orange); line-height: 1; }
+  .result-metric small { display: block; font-family: 'Inter'; font-size: 14px; font-weight: 500; color: #B6BCCB; margin-top: .7rem; letter-spacing: 0; }
+  .result-card h3 { font-size: 1.35rem; margin: 1.75rem 0 .5rem; }
+  .result-meta { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #8A93A8; letter-spacing: .04em; }
+
+  /* ── WHY (bento, varied cells) ── */
+  .bento { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+  .bento-cell { border-radius: var(--r); padding: 2.25rem; border: 1px solid var(--line); background: var(--surface); }
+  .bento-cell.accent { background: linear-gradient(135deg, #FCEDE6, #F8DECE); border-color: #E8C3AC; }
+  .bento-cell.navy { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .bento-cell .ic { color: var(--orange-text); margin-bottom: 1.25rem; }
+  .bento-cell.navy .ic { color: var(--orange); }
+  .bento-cell h3 { font-size: 1.3rem; margin-bottom: .6rem; }
+  .bento-cell p { color: var(--muted); font-size: 15px; }
+  .bento-cell.navy p { color: #B6BCCB; }
+
+  /* ── FAQ ── */
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem; }
+  details.faq { border-top: 1px solid var(--line); padding: .35rem 0; }
+  details.faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: 1rem; align-items: center; padding: 1.3rem 0; font-family: 'Space Grotesk'; font-size: 1.1rem; font-weight: 500; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq .plus { color: var(--orange-text); font-size: 1.4rem; transition: transform .2s; flex-shrink: 0; }
+  details.faq[open] .plus { transform: rotate(45deg); }
+  details.faq p { color: var(--muted); padding-bottom: 1.4rem; max-width: 56ch; font-size: 15px; }
+
+  /* ── ABOUT ── */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: center; }
+  .about-grid p { font-size: 1.15rem; color: var(--muted); }
+  .about-grid p b { color: var(--ink); font-weight: 600; }
+  .stat-stack { display: grid; gap: 1.25rem; }
+  .stat { border: 1px solid var(--line-strong); border-radius: var(--r); padding: 1.75rem; background: var(--surface); }
+  .stat .n { font-family: 'Space Grotesk'; font-size: 2.6rem; font-weight: 700; color: var(--ink); line-height: 1; }
+  .stat .l { font-size: 14px; color: var(--muted); margin-top: .5rem; }
+
+  /* ── FINAL CTA (navy band) ── */
+  .cta { background: var(--navy-dark); color: #fff; text-align: center; position: relative; }
+  .cta::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--orange), var(--teal)); }
+  .cta h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); max-width: 18ch; margin: 0 auto 1.25rem; }
+  .cta .lead { color: #B6BCCB; margin: 0 auto 2.25rem; max-width: 48ch; }
+  .cta .email { display: block; margin-top: 1.5rem; font-size: 14px; color: #8A93A8; }
+  .cta .email a { color: var(--orange); }
+
+  /* ── FOOTER ── */
+  footer { background: #14171F; color: #8A93A8; }
+  .footer-inner { max-width: var(--max); margin: 0 auto; padding: 2.5rem var(--pad); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .footer-inner img { height: 26px; opacity: .65; }
+  .footer-inner small { font-size: 13px; }
+
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links.open {
+      display: flex; flex-direction: column; gap: 0; position: absolute; top: 68px; left: 0; right: 0;
+      background: var(--canvas); border-bottom: 1px solid var(--line); padding: .5rem var(--pad) 1rem;
+    }
+    .nav-links.open .nav-link { padding: .9rem 0; border-top: 1px solid var(--line); width: 100%; }
+    .hero-grid { grid-template-columns: 1fr; min-height: 0; gap: 2rem; padding-top: 2.5rem; padding-bottom: 2.5rem; }
+    .hero-grid::before { display: none; }
+    .hero-copy { padding: 1rem 0 0; }
+    .hero-media { order: -1; }
+    .sol-grid, .results-grid, .bento, .who-grid, .faq-grid, .about-grid, .prob-grid { grid-template-columns: 1fr; }
+    .aide { grid-template-columns: 1fr 1fr; }
+    .aide-step:nth-child(2) { border-right: 0; }
+    .aide-step:nth-child(1), .aide-step:nth-child(2) { border-bottom: 1px solid var(--line); }
+    .about-grid { gap: 2rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 560px) {
+    .sec-pad { padding: 4rem 0; }
+    .aide { grid-template-columns: 1fr; }
+    .aide-step { border-right: 0; border-bottom: 1px solid var(--line); }
+    .aide-step:last-child { border-bottom: 0; }
+    .hero-actions { width: 100%; }
+    .hero-actions .btn { flex: 1; justify-content: center; }
+    .who-grid { gap: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker-track { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .btn, .btn-arrow { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to content</a>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Code Engine Studio home"><img src="assets/logo-dark.png" alt="Code Engine Studio" width="130" height="28"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#what-we-do" class="nav-link">Services</a>
+      <a href="#how-it-works" class="nav-link">Process</a>
+      <a href="#results" class="nav-link">Results</a>
+      <a href="#why-ces" class="nav-link">Why CES</a>
+      <a href="#about" class="nav-link">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'nav' })">Book a free call</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero" id="main">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="kicker">AI Engineering / Singapore</span>
+      <h1>Your team is using AI.<br><span class="accent">Your business isn't.</span></h1>
+      <p class="lead">We put a system around it, so AI works for the whole business, not just whoever figured it out.</p>
+      <div class="hero-actions">
+        <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'hero' })">Book a free call <span class="btn-arrow">&rarr;</span></a>
+        <a href="#what-we-do" class="btn btn-ghost">See how we work</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="frame">
+        <span class="tick tl"></span>
+        <span class="tick br"></span>
+        <picture>
+          <source srcset="assets/hero.webp" type="image/webp">
+          <img src="assets/hero.jpg" alt="Code Engine Studio team" width="1600" height="1200" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── TICKER ── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="dot">/</span> 11 years in professional technology services</span>
+    <span class="ticker-item"><span class="dot">/</span> Enterprise AI models, deployed in your environment</span>
+    <span class="ticker-item"><span class="dot">/</span> PDPA-compliant by design</span>
+    <span class="ticker-item"><span class="dot">/</span> 11 years in professional technology services</span>
+    <span class="ticker-item"><span class="dot">/</span> Enterprise AI models, deployed in your environment</span>
+    <span class="ticker-item"><span class="dot">/</span> PDPA-compliant by design</span>
+  </div>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section class="sec-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Does any of this sound familiar?</h2>
+    </div>
+    <div class="prob-feature reveal">
+      <div class="prob-label">Ungoverned AI use</div>
+      <p class="q">"My staff use ChatGPT, but I have no idea what they're putting into it."</p>
+    </div>
+    <div class="prob-grid">
+      <div class="prob-card reveal">
+        <div class="prob-label">No visible ROI</div>
+        <p class="q">"We've spent on AI tools and I can't point to what it's done for the business."</p>
+      </div>
+      <div class="prob-card reveal">
+        <div class="prob-label">Inconsistent output</div>
+        <p class="q">"The quality depends on who's prompting and how good they are at it."</p>
+      </div>
+    </div>
+    <p class="prob-close reveal">The fix isn't a better tool. <b>It's a structured approach to where and how AI fits your business.</b></p>
+  </div>
+</section>
+
+<!-- ── SOLUTION ── -->
+<section id="what-we-do" class="sec-pad rule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The solution</span>
+      <h2>Two ways we work with you.</h2>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-panel sol-light reveal">
+        <span class="num">01</span>
+        <h3>AI Workflows &amp; Assistants</h3>
+        <p>Purpose-built systems inside the tools your team already uses. AI that runs the same way every time, for everyone.</p>
+        <span class="tag">Deployed in weeks <span aria-hidden="true">&rarr;</span></span>
+      </div>
+      <div class="sol-panel sol-dark reveal">
+        <span class="num">02</span>
+        <h3>Custom AI Software</h3>
+        <p>Built for your specific needs, not bought off a shelf. Production-grade, and leaner than traditional development.</p>
+        <span class="tag">Built, not bought <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS / AIDE ── -->
+<section id="how-it-works" class="sec-pad rule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our process for turning AI activity into business results.</h2>
+    </div>
+    <div class="aide reveal">
+      <div class="aide-step">
+        <div class="aide-letter">A</div>
+        <span class="aide-word">Assess</span>
+        <h3>Map the work</h3>
+        <p>We interview your team and map how work actually gets done.</p>
+      </div>
+      <div class="aide-step">
+        <div class="aide-letter">I</div>
+        <span class="aide-word">Ideate</span>
+        <h3>Design first</h3>
+        <p>We design the solution and get your sign-off before building anything.</p>
+      </div>
+      <div class="aide-step">
+        <div class="aide-letter">D</div>
+        <span class="aide-word">Develop</span>
+        <h3>Build and deploy</h3>
+        <p>We build and deploy inside the systems you already run.</p>
+      </div>
+      <div class="aide-step">
+        <div class="aide-letter">E</div>
+        <span class="aide-word">Evolve</span>
+        <h3>Refine and expand</h3>
+        <p>We refine, optimize, and expand as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO ── -->
+<section class="sec-pad rule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Built for businesses ready to go from AI activity to AI results.</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-item reveal"><span class="who-num">01</span><p>Your staff use AI, but there's no process or governance around it.</p></div>
+      <div class="who-item reveal"><span class="who-num">02</span><p>You've spent on AI and can't point to results.</p></div>
+      <div class="who-item reveal"><span class="who-num">03</span><p>You use AI personally, but your team hasn't adopted it.</p></div>
+      <div class="who-item reveal"><span class="who-num">04</span><p>You're not sure whether the ROI is even there yet.</p></div>
+      <div class="who-item reveal"><span class="who-num">05</span><p>You handle sensitive client data and can't use public AI.</p></div>
+    </div>
+    <p class="who-close reveal">You don't need all five. One is usually enough.</p>
+  </div>
+</section>
+
+<!-- ── RESULTS (navy band) ── -->
+<section id="results" class="sec-pad band-dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker on-dark">Real work</span>
+      <h2>What this looks like in practice.</h2>
+    </div>
+    <div class="results-grid">
+      <div class="result-card reveal">
+        <div class="result-metric">2.5&times;<small>document volume handled by the same team</small></div>
+        <h3>Contract Intelligence</h3>
+        <p class="result-meta">Custom AI Software / In development</p>
+      </div>
+      <div class="result-card reveal">
+        <div class="result-metric">90 &rarr; 10 min<small>research time per event</small></div>
+        <h3>Event Research</h3>
+        <p class="result-meta">AI Workflows &amp; Assistants / Claude, Excel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY ── -->
+<section id="why-ces" class="sec-pad">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What makes us different.</h2>
+    </div>
+    <div class="bento">
+      <div class="bento-cell accent reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Prove value before building</h3>
+        <p>We start by finding measurable business value, before a single line of code.</p>
+      </div>
+      <div class="bento-cell reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V7a4 4 0 0 1 8 0v4"/><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M12 15v2"/></svg></div>
+        <h3>No vendor lock-in</h3>
+        <p>Documentation and team onboarding come standard. The system stays yours.</p>
+      </div>
+      <div class="bento-cell reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>PDPA-compliant</h3>
+        <p>Your data stays yours, governed by design and kept inside your environment.</p>
+      </div>
+      <div class="bento-cell navy reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></div>
+        <h3>We run what we build</h3>
+        <p>We use our own solutions every day. We don't ship anything we wouldn't rely on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec-pad rule">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq-grid">
+      <details class="faq reveal">
+        <summary>We already have ChatGPT. Why do we need this? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>ChatGPT is a tool. We build the system around it, so output is consistent and governed across your whole team, not dependent on who happens to be prompting.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>What happens to our client data? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>It stays in your environment. We deploy enterprise AI models you control, PDPA-compliant by design.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>How long before we see results? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>Most workflow projects show measurable results in weeks, not months. We prove value early, before scaling.</p>
+      </details>
+      <details class="faq reveal">
+        <summary>What if our team doesn't actually use it? <span class="plus" aria-hidden="true">+</span></summary>
+        <p>Adoption is the point. We build inside the tools they already use and onboard the team, so it sticks.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="sec-pad rule">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.7rem,3.5vw,2.6rem);margin-bottom:1.5rem;">About us</h2>
+        <p>We've spent a decade delivering technology for businesses across 20+ countries, with one mission: <b>fuel real business growth.</b> Not as a vendor, but as a strategic partner. Now we're evolving into an AI engineering company.</p>
+      </div>
+      <div class="stat-stack reveal">
+        <div class="stat"><div class="n">11 years</div><div class="l">in professional technology services</div></div>
+        <div class="stat"><div class="n">100+</div><div class="l">completed projects</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section id="cta" class="cta sec-pad">
+  <div class="wrap">
+    <h2 class="reveal">Ready to see what AI can actually do for your business?</h2>
+    <p class="lead reveal">Book a free 30-minute discovery call. If it's not the right fit, we'll tell you that too.</p>
+    <div class="reveal" style="display:flex;justify-content:center;">
+      <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'cta' })">Book a free call <span class="btn-arrow">&rarr;</span></a>
+    </div>
+    <span class="email reveal">Or email us at <a href="mailto:newbusiness@codeenginestudio.com">newbusiness@codeenginestudio.com</a></span>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <img src="assets/logo.webp" alt="Code Engine Studio">
+    <small>&copy; <span id="year"></span> Code Engine Studio. Singapore.</small>
+  </div>
+</footer>
+
+<script>
+  // dynamic year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile nav
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function (e) {
+    if (e.target.classList.contains('nav-link')) {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // scroll reveal
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  // active nav (scroll-spy)
+  var navItems = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+  var spy = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (!en.isIntersecting) return;
+      navItems.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + en.target.id);
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  navItems.forEach(function (a) {
+    var sec = document.querySelector(a.getAttribute('href'));
+    if (sec) spy.observe(sec);
+  });
+</script>
+</body>
+</html>

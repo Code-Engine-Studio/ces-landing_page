@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PR0X9FBDTH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PR0X9FBDTH');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Engine Studio - AI Engineering Singapore</title>
+<meta name="description" content="Code Engine Studio - AI engineering in Singapore. 11 years in professional technology services, deploying enterprise AI models in your environment, PDPA-compliant by design.">
+<link rel="canonical" href="https://cestudio.ai/">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cestudio.ai/">
+<meta property="og:title" content="Code Engine Studio - AI Engineering Singapore">
+<meta property="og:description" content="Your team is using AI. Your business isn't. We put a system around it, so AI works for the whole business.">
+<meta property="og:image" content="https://cestudio.ai/assets/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Code Engine Studio - AI Engineering Singapore">
+<meta name="twitter:description" content="Your team is using AI. Your business isn't. We put a system around it.">
+<meta name="twitter:image" content="https://cestudio.ai/assets/hero.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Libre+Baskerville:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Libre+Baskerville:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Code Engine Studio",
+  "url": "https://cestudio.ai/",
+  "logo": "https://cestudio.ai/assets/logo.png",
+  "description": "AI engineering in Singapore. Enterprise AI models deployed in your environment, PDPA-compliant by design.",
+  "email": "newbusiness@codeenginestudio.com",
+  "address": { "@type": "PostalAddress", "addressCountry": "SG", "addressLocality": "Singapore" }
+}
+</script>
+
+<style>
+  /* ── TOKENS ── */
+  :root {
+    --bg:          #16181D;   /* flat charcoal, derived from brand navy */
+    --bg-2:        #1C1F26;
+    --bg-3:        #22262F;
+    --ink:         #ECECE6;
+    --muted:       #969CAA;
+    --line:        #2C303A;
+    --line-strong: #3B414E;
+    --orange:      #F15927;   /* brand accent (preserved) */
+    --orange-2:    #FF6E3C;
+    --teal:        #34BACB;   /* brand teal, lightened for dark legibility */
+    --navy:        #273043;   /* brand navy (preserved ref) */
+    --max:         1240px;
+    --pad:         2rem;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* brutalist: sharp corners everywhere, hairline structure */
+  h1, h2, h3 { font-weight: 800; line-height: .98; letter-spacing: -0.03em; }
+  .serif-i { font-family: 'Libre Baskerville', Georgia, serif; font-weight: 400; font-style: italic; letter-spacing: -0.01em; }
+
+  .mono { font-family: 'IBM Plex Mono', monospace; }
+  .kicker {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--orange); display: inline-block;
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-family: 'Inter'; font-weight: 700; font-size: 15px; letter-spacing: -0.01em;
+    padding: .9rem 1.6rem; border: 1.5px solid transparent; cursor: pointer;
+    transition: transform .14s ease, background .14s ease, border-color .14s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--orange); color: #16181D; }
+  .btn-primary:hover { background: var(--orange-2); transform: translateY(-2px); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+  .btn-ghost:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .btn .ar { transition: transform .14s ease; }
+  .btn:hover .ar { transform: translateX(4px); }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(22,24,29,0.86); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); height: 70px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo img { height: 28px; width: auto; }
+  .nav-links { display: flex; gap: 2rem; align-items: center; }
+  .nav-link { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: .02em; color: var(--muted); transition: color .14s; }
+  .nav-link:hover { color: var(--ink); }
+  .nav-right { display: flex; align-items: center; gap: 1.25rem; }
+  .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: .4rem; }
+  .nav-toggle span { display: block; width: 22px; height: 2px; background: var(--ink); margin: 4px 0; }
+
+  /* ── SECTION SCAFFOLD ── */
+  .sec { padding: 6rem 0; border-top: 1px solid var(--line); }
+  .sec-head { margin-bottom: 3.25rem; max-width: 880px; }
+  .sec-head h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); margin-top: 1rem; }
+  .lead { color: var(--muted); font-size: 1.05rem; max-width: 60ch; }
+
+  /* ── HERO ── */
+  .hero { position: relative; border-bottom: 1px solid var(--line); overflow: hidden; }
+  .hero-grid { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); min-height: calc(100dvh - 70px); display: grid; grid-template-columns: 1fr; align-content: center; gap: 0; }
+  /* brutalist blueprint hairlines in the empty zone */
+  .hero::after {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 38%; pointer-events: none; z-index: 0;
+    background-image: linear-gradient(to right, var(--line) 1px, transparent 1px);
+    background-size: 110px 100%; opacity: .5;
+    -webkit-mask-image: linear-gradient(to left, #000, transparent);
+            mask-image: linear-gradient(to left, #000, transparent);
+  }
+  .hero-copy { position: relative; z-index: 1; padding: 3.5rem 0; max-width: 100%; }
+  .hero h1 { font-size: clamp(2.2rem, 5.2vw, 4.6rem); font-weight: 900; }
+  .hero h1 .l2 { color: var(--orange); }
+  .hero-sub { color: var(--muted); font-size: 1.2rem; max-width: 44ch; margin: 1.75rem 0 2rem; line-height: 1.5; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .caret { display: inline-block; width: 10px; height: 1.05em; background: var(--orange); margin-left: 2px; vertical-align: -2px; animation: blink 1.1s step-end infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ── IMAGE BAND ── */
+  .imgband { border-bottom: 1px solid var(--line); position: relative; }
+  .imgband img { width: 100%; height: clamp(260px, 38vw, 460px); object-fit: cover; filter: grayscale(.35) contrast(1.05) brightness(.92); }
+  .imgband::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,24,29,.25), rgba(22,24,29,.55)); z-index: 1; }
+  .imgband .topbar { position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); z-index: 2; }
+
+  /* ── TICKER ── */
+  .ticker { background: var(--bg); overflow: hidden; border-bottom: 1px solid var(--line); }
+  .ticker-track { display: flex; width: max-content; animation: scroll 28s linear infinite; }
+  .ticker:hover .ticker-track { animation-play-state: paused; }
+  .ticker-item { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: .02em; color: var(--ink); padding: .9rem 2rem; white-space: nowrap; display: flex; gap: .9rem; }
+  .ticker-item .s { color: var(--orange); }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── PROBLEM (brutalist stacked rows) ── */
+  .prob-row { display: grid; grid-template-columns: 90px 1fr; gap: 1.5rem; padding: 2.5rem 0; border-top: 1px solid var(--line); align-items: start; }
+  .prob-row:first-of-type { border-top: 1px solid var(--line-strong); }
+  .prob-idx { font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: var(--orange); padding-top: .5rem; }
+  .prob-q { font-size: clamp(1.4rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.12; max-width: 24ch; }
+  .prob-tag { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .9rem; }
+  .prob-close { margin-top: 3rem; font-size: clamp(1.3rem,2.4vw,1.7rem); font-weight: 700; max-width: 42ch; letter-spacing: -0.02em; }
+  .prob-close b { color: var(--orange); }
+
+  /* ── SOLUTION (asymmetric 2 panels) ── */
+  .sol-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .sol-panel { background: var(--bg-2); padding: 3rem; display: flex; flex-direction: column; min-height: 360px; }
+  .sol-panel.fill { background: var(--orange); color: #16181D; }
+  .sol-panel .num { font-family: 'IBM Plex Mono', monospace; font-size: 13px; opacity: .65; }
+  .sol-panel h3 { font-size: clamp(1.6rem,2.6vw,2.2rem); margin: 1rem 0 1rem; letter-spacing: -0.02em; }
+  .sol-panel p { color: var(--muted); margin-bottom: auto; }
+  .sol-panel.fill p { color: #3a2113; }
+  .sol-panel .tag { margin-top: 2rem; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; color: var(--orange); display: inline-flex; gap: .5rem; }
+  .sol-panel.fill .tag { color: #16181D; }
+
+  /* ── PROCESS / AIDE ── */
+  .aide { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .aide-step { background: var(--bg-2); padding: 2.5rem 1.75rem; }
+  .aide-letter { font-family: 'Inter'; font-weight: 900; font-size: 4rem; line-height: 1; color: var(--orange); letter-spacing: -0.04em; }
+  .aide-word { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); display: block; margin-top: .75rem; }
+  .aide-step h3 { font-size: 1.25rem; margin: 1.1rem 0 .6rem; letter-spacing: -0.02em; }
+  .aide-step p { font-size: 14.5px; color: var(--muted); }
+
+  /* ── WHO (dense mono checklist) ── */
+  .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 3.5rem; }
+  .who-item { display: grid; grid-template-columns: 30px 1fr; gap: 1rem; padding: 1.5rem 0; border-top: 1px solid var(--line); align-items: start; }
+  .who-num { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--orange); padding-top: .2rem; }
+  .who-item p { font-size: 1.05rem; }
+  .who-close { margin-top: 2.75rem; font-size: 1.35rem; font-weight: 700; letter-spacing: -0.02em; }
+  .who-close .serif-i { color: var(--orange); }
+
+  /* ── RESULTS (big metrics) ── */
+  .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .result-card { background: var(--bg-2); padding: 3rem; }
+  .result-metric { font-family: 'Inter'; font-weight: 900; font-size: clamp(3rem, 6vw, 4.6rem); color: var(--orange); line-height: .9; letter-spacing: -0.04em; }
+  .result-metric small { display: block; font-family: 'Inter'; font-weight: 500; font-size: 14px; color: var(--muted); margin-top: 1rem; letter-spacing: 0; }
+  .result-card h3 { font-size: 1.4rem; margin: 2rem 0 .5rem; letter-spacing: -0.02em; }
+  .result-meta { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--muted); letter-spacing: .03em; }
+
+  /* ── WHY (2x2 bento, varied) ── */
+  .bento { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .bento-cell { background: var(--bg-2); padding: 2.5rem; }
+  .bento-cell.accent { background: var(--orange); color: #16181D; }
+  .bento-cell.tint { background: var(--bg-3); }
+  .bento-cell .ic { color: var(--orange); margin-bottom: 1.5rem; }
+  .bento-cell.accent .ic { color: #16181D; }
+  .bento-cell h3 { font-size: 1.3rem; margin-bottom: .6rem; letter-spacing: -0.02em; }
+  .bento-cell p { color: var(--muted); font-size: 15px; }
+  .bento-cell.accent p { color: #3a2113; }
+
+  /* ── FAQ ── */
+  details.faq { border-top: 1px solid var(--line); }
+  details.faq:first-of-type { border-top: 1px solid var(--line-strong); }
+  details.faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 40px 1fr 30px; gap: 1rem; align-items: center; padding: 1.6rem 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
+  details.faq summary::-webkit-details-marker { display: none; }
+  details.faq .fnum { font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 400; color: var(--orange); }
+  details.faq .plus { color: var(--orange); font-size: 1.5rem; transition: transform .2s; text-align: right; }
+  details.faq[open] .plus { transform: rotate(45deg); }
+  details.faq p { color: var(--muted); padding: 0 0 1.6rem 56px; max-width: 70ch; font-size: 15px; }
+
+  /* ── ABOUT ── */
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3.5rem; align-items: center; }
+  .about-grid p { font-size: 1.2rem; color: var(--muted); }
+  .about-grid p b { color: var(--ink); font-weight: 700; }
+  .stat-stack { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .stat { background: var(--bg-2); padding: 1.9rem; }
+  .stat .n { font-family: 'Inter'; font-weight: 900; font-size: 2.8rem; color: var(--ink); line-height: 1; letter-spacing: -0.03em; }
+  .stat .l { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--muted); margin-top: .6rem; letter-spacing: .02em; }
+
+  /* ── CTA (orange full-bleed finale, the single color block) ── */
+  .cta { background: var(--orange); color: #16181D; padding: 6.5rem 0; }
+  .cta h2 { font-size: clamp(2.2rem, 5.5vw, 4rem); max-width: 16ch; letter-spacing: -0.03em; }
+  .cta p { font-size: 1.15rem; color: #3a2113; max-width: 46ch; margin: 1.5rem 0 2.25rem; }
+  .cta .btn-dark { background: #16181D; color: var(--ink); border-color: #16181D; }
+  .cta .btn-dark:hover { background: #000; transform: translateY(-2px); }
+  .cta .email { display: block; margin-top: 1.75rem; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3a2113; }
+  .cta .email a { color: #16181D; font-weight: 500; border-bottom: 1px solid #16181D; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--bg); border-top: 1px solid var(--line); }
+  .footer-inner { max-width: var(--max); margin: 0 auto; padding: 2.5rem var(--pad); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .footer-inner img { height: 24px; opacity: .6; }
+  .footer-inner small { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: var(--muted); }
+
+  /* ── REVEAL ── */
+  .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s cubic-bezier(.16,1,.3,1), transform .6s cubic-bezier(.16,1,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links.open { display: flex; flex-direction: column; gap: 0; position: absolute; top: 70px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--line); padding: .5rem var(--pad) 1rem; }
+    .nav-links.open .nav-link { padding: 1rem 0; border-top: 1px solid var(--line); width: 100%; }
+    .hero::after { display: none; }
+    .hero-copy { max-width: none; }
+    .sol-grid, .results-grid, .bento, .who-grid, .about-grid { grid-template-columns: 1fr; }
+    .aide { grid-template-columns: 1fr 1fr; }
+    .about-grid { gap: 2.5rem; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 560px) {
+    .sec { padding: 4rem 0; }
+    .aide { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr; gap: 0; }
+    .hero-actions { width: 100%; }
+    .hero-actions .btn { flex: 1; justify-content: center; }
+    .prob-row { grid-template-columns: 1fr; gap: .5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ticker-track, .caret { animation: none; }
+    .caret { opacity: 1; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .btn, .btn .ar { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Code Engine Studio home"><img src="assets/logo.webp" alt="Code Engine Studio" width="112" height="28"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#what-we-do" class="nav-link">Services</a>
+      <a href="#how-it-works" class="nav-link">Process</a>
+      <a href="#results" class="nav-link">Results</a>
+      <a href="#why-ces" class="nav-link">Why CES</a>
+      <a href="#about" class="nav-link">About</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'nav' })">Book a free call</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="kicker">AI Engineering &middot; Singapore<span class="caret" aria-hidden="true"></span></span>
+      <h1 style="margin-top:1.5rem;">Your team is using AI.<br><span class="l2">Your business <span class="serif-i">isn't.</span></span></h1>
+      <p class="hero-sub">We put a system around it, so AI works for the whole business, not just whoever figured it out.</p>
+      <div class="hero-actions">
+        <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-primary" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'hero' })">Book a free call <span class="ar" aria-hidden="true">&rarr;</span></a>
+        <a href="#what-we-do" class="btn btn-ghost">See how we work</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── IMAGE BAND (real brand photo) ── -->
+<div class="imgband">
+  <span class="topbar" aria-hidden="true"></span>
+  <picture>
+    <source srcset="assets/hero.webp" type="image/webp">
+    <img src="assets/hero.jpg" alt="Code Engine Studio team at work" width="1600" height="1200" loading="lazy" decoding="async">
+  </picture>
+</div>
+
+<!-- ── TICKER ── -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="s">/</span> 11 years in professional technology services</span>
+    <span class="ticker-item"><span class="s">/</span> Enterprise AI models, deployed in your environment</span>
+    <span class="ticker-item"><span class="s">/</span> PDPA-compliant by design</span>
+    <span class="ticker-item"><span class="s">/</span> 11 years in professional technology services</span>
+    <span class="ticker-item"><span class="s">/</span> Enterprise AI models, deployed in your environment</span>
+    <span class="ticker-item"><span class="s">/</span> PDPA-compliant by design</span>
+  </div>
+</div>
+
+<!-- ── PROBLEM ── -->
+<section class="sec" style="border-top:0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Does any of this sound familiar?</h2>
+    </div>
+    <div class="prob-row reveal">
+      <div class="prob-idx">01</div>
+      <div>
+        <p class="prob-q">"My staff use ChatGPT, but I have no idea what they're putting into it."</p>
+        <div class="prob-tag">Ungoverned AI use</div>
+      </div>
+    </div>
+    <div class="prob-row reveal">
+      <div class="prob-idx">02</div>
+      <div>
+        <p class="prob-q">"We've spent on AI tools and I can't point to what it's done for the business."</p>
+        <div class="prob-tag">No visible ROI</div>
+      </div>
+    </div>
+    <div class="prob-row reveal">
+      <div class="prob-idx">03</div>
+      <div>
+        <p class="prob-q">"The quality depends on who's prompting and how good they are at it."</p>
+        <div class="prob-tag">Inconsistent output</div>
+      </div>
+    </div>
+    <p class="prob-close reveal">The fix isn't a better tool. <b>It's a structured approach to where and how AI fits your business.</b></p>
+  </div>
+</section>
+
+<!-- ── SOLUTION ── -->
+<section id="what-we-do" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">The solution</span>
+      <h2>Two ways we work with you.</h2>
+    </div>
+    <div class="sol-grid reveal">
+      <div class="sol-panel">
+        <span class="num">01</span>
+        <h3>AI Workflows &amp; Assistants</h3>
+        <p>Purpose-built systems inside the tools your team already uses. AI that runs the same way every time, for everyone.</p>
+        <span class="tag">Deployed in weeks <span aria-hidden="true">&rarr;</span></span>
+      </div>
+      <div class="sol-panel fill">
+        <span class="num">02</span>
+        <h3>Custom AI Software</h3>
+        <p>Built for your specific needs, not bought off a shelf. Production-grade, and leaner than traditional development.</p>
+        <span class="tag">Built, not bought <span aria-hidden="true">&rarr;</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS / AIDE ── -->
+<section id="how-it-works" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Our process for turning AI activity into business results.</h2>
+    </div>
+    <div class="aide reveal">
+      <div class="aide-step">
+        <div class="aide-letter">A</div><span class="aide-word">Assess</span>
+        <h3>Map the work</h3>
+        <p>We interview your team and map how work actually gets done.</p>
+      </div>
+      <div class="aide-step">
+        <div class="aide-letter">I</div><span class="aide-word">Ideate</span>
+        <h3>Design first</h3>
+        <p>We design the solution and get your sign-off before building anything.</p>
+      </div>
+      <div class="aide-step">
+        <div class="aide-letter">D</div><span class="aide-word">Develop</span>
+        <h3>Build and deploy</h3>
+        <p>We build and deploy inside the systems you already run.</p>
+      </div>
+      <div class="aide-step">
+        <div class="aide-letter">E</div><span class="aide-word">Evolve</span>
+        <h3>Refine and expand</h3>
+        <p>We refine, optimize, and expand as your business grows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHO ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Built for businesses ready to go from AI activity to AI results.</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-item reveal"><span class="who-num">01</span><p>Your staff use AI, but there's no process or governance around it.</p></div>
+      <div class="who-item reveal"><span class="who-num">02</span><p>You've spent on AI and can't point to results.</p></div>
+      <div class="who-item reveal"><span class="who-num">03</span><p>You use AI personally, but your team hasn't adopted it.</p></div>
+      <div class="who-item reveal"><span class="who-num">04</span><p>You're not sure whether the ROI is even there yet.</p></div>
+      <div class="who-item reveal"><span class="who-num">05</span><p>You handle sensitive client data and can't use public AI.</p></div>
+    </div>
+    <p class="who-close reveal">You don't need all five. <span class="serif-i">One is usually enough.</span></p>
+  </div>
+</section>
+
+<!-- ── RESULTS ── -->
+<section id="results" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Real work</span>
+      <h2>What this looks like in practice.</h2>
+    </div>
+    <div class="results-grid reveal">
+      <div class="result-card">
+        <div class="result-metric">2.5&times;<small>document volume handled by the same team</small></div>
+        <h3>Contract Intelligence</h3>
+        <p class="result-meta">Custom AI Software / In development</p>
+      </div>
+      <div class="result-card">
+        <div class="result-metric">90 &rarr; 10 min<small>research time per event</small></div>
+        <h3>Event Research</h3>
+        <p class="result-meta">AI Workflows &amp; Assistants / Claude, Excel</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY ── -->
+<section id="why-ces" class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>What makes us different.</h2>
+    </div>
+    <div class="bento reveal">
+      <div class="bento-cell accent">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></div>
+        <h3>Prove value before building</h3>
+        <p>We start by finding measurable business value, before a single line of code.</p>
+      </div>
+      <div class="bento-cell">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V7a4 4 0 0 1 8 0v4"/><rect x="5" y="11" width="14" height="10" rx="0"/><path d="M12 15v2"/></svg></div>
+        <h3>No vendor lock-in</h3>
+        <p>Documentation and team onboarding come standard. The system stays yours.</p>
+      </div>
+      <div class="bento-cell tint">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>PDPA-compliant</h3>
+        <p>Your data stays yours, governed by design and kept inside your environment.</p>
+      </div>
+      <div class="bento-cell">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg></div>
+        <h3>We run what we build</h3>
+        <p>We use our own solutions every day. We don't ship anything we wouldn't rely on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>FAQ</h2>
+    </div>
+    <div class="reveal">
+      <details class="faq">
+        <summary><span class="fnum">01</span><span>We already have ChatGPT. Why do we need this?</span><span class="plus" aria-hidden="true">+</span></summary>
+        <p>ChatGPT is a tool. We build the system around it, so output is consistent and governed across your whole team, not dependent on who happens to be prompting.</p>
+      </details>
+      <details class="faq">
+        <summary><span class="fnum">02</span><span>What happens to our client data?</span><span class="plus" aria-hidden="true">+</span></summary>
+        <p>It stays in your environment. We deploy enterprise AI models you control, PDPA-compliant by design.</p>
+      </details>
+      <details class="faq">
+        <summary><span class="fnum">03</span><span>How long before we see results?</span><span class="plus" aria-hidden="true">+</span></summary>
+        <p>Most workflow projects show measurable results in weeks, not months. We prove value early, before scaling.</p>
+      </details>
+      <details class="faq">
+        <summary><span class="fnum">04</span><span>What if our team doesn't actually use it?</span><span class="plus" aria-hidden="true">+</span></summary>
+        <p>Adoption is the point. We build inside the tools they already use and onboard the team, so it sticks.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about" class="sec">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.8rem,3.6vw,2.8rem);margin-bottom:1.5rem;">About us</h2>
+        <p>We've spent a decade delivering technology for businesses across 20+ countries, with one mission: <b>fuel real business growth.</b> Not as a vendor, but as a strategic partner. Now we're evolving into an AI engineering company.</p>
+      </div>
+      <div class="stat-stack reveal">
+        <div class="stat"><div class="n">11 years</div><div class="l">in professional technology services</div></div>
+        <div class="stat"><div class="n">100+</div><div class="l">completed projects</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA (orange color block) ── -->
+<section id="cta" class="cta">
+  <div class="wrap">
+    <h2 class="reveal">Ready to see what AI can actually do for your business?</h2>
+    <p class="reveal">Book a free 30-minute discovery call. If it's not the right fit, we'll tell you that too.</p>
+    <div class="reveal">
+      <a href="https://ces.pipedrive.com/scheduler/xKv6vEFl/ces-introduction-meeting" target="_blank" rel="noopener" class="btn btn-dark" onclick="gtag('event', 'book_a_call_click', { event_category: 'button', event_label: 'cta' })">Book a free call <span class="ar" aria-hidden="true">&rarr;</span></a>
+      <span class="email">Or email us at <a href="mailto:newbusiness@codeenginestudio.com">newbusiness@codeenginestudio.com</a></span>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <img src="assets/logo.webp" alt="Code Engine Studio">
+    <small>&copy; <span id="year"></span> Code Engine Studio. Singapore.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function () {
+    var open = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function (e) {
+    if (e.target.classList.contains('nav-link')) { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+  });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+</script>
+</body>
+</html>
