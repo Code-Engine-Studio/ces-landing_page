@@ -7,14 +7,18 @@
       function gtag() {
         dataLayer.push(arguments);
       }
+
+      // Saved user choice always takes priority over the default
+      var savedConsent = null;
+      try {
+        savedConsent = localStorage.getItem("ces_consent");
+      } catch (e) {}
+
       gtag("consent", "default", {
-        analytics_storage: "denied",
-        ad_storage: "denied",
+        analytics_storage: savedConsent === "denied" ? "denied" : "granted",
+        ad_storage: "denied", // never changes
         wait_for_update: 500,
       });
-      if (localStorage.getItem("ces_consent") === "granted") {
-        gtag("consent", "update", { analytics_storage: "granted" });
-      }
     </script>
     <!-- Google Tag Manager -->
     <script>
@@ -42,7 +46,10 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-PR0X9FBDTH");
+      gtag("config", "G-PR0X9FBDTH", {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false,
+      });
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -1408,20 +1415,21 @@
       }
       .cookie-decline {
         background: transparent;
-        color: rgba(255, 255, 255, 0.45);
+        color: var(--white);
         font-size: 0.8rem;
-        font-weight: 500;
-        padding: 0.45rem 1rem;
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        font-weight: 600;
+        padding: 0.45rem 1.1rem;
+        border: 1.5px solid rgba(255, 255, 255, 0.55);
         border-radius: var(--radius);
         cursor: pointer;
         transition:
           color 0.2s,
-          border-color 0.2s;
+          border-color 0.2s,
+          background 0.2s;
       }
       .cookie-decline:hover {
-        color: rgba(255, 255, 255, 0.8);
-        border-color: rgba(255, 255, 255, 0.3);
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.85);
       }
 
       /* ── SCROLL REVEAL ── */
@@ -2302,11 +2310,12 @@
       aria-label="Cookie consent notice"
     >
       <p class="cookie-text">
-        We use analytics cookies (Google Analytics) to understand how visitors
-        use this site. No tracking happens until you accept.
+        We use analytics cookies to help us understand how visitors use our
+        site so we can improve your experience. These cookies are not used
+        for advertising purposes.
       </p>
       <div class="cookie-actions">
-        <button class="cookie-accept" id="cookie-accept">Accept</button>
+        <button class="cookie-accept" id="cookie-accept">Got it</button>
         <button class="cookie-decline" id="cookie-decline">Decline</button>
       </div>
     </div>
@@ -2322,6 +2331,18 @@
             banner.style.display = "none";
           }, 350);
         }
+        function deleteAnalyticsCookies() {
+          document.cookie.split(";").forEach(function (c) {
+            var name = c.trim().split("=")[0];
+            if (/^_ga/.test(name)) {
+              document.cookie =
+                name +
+                "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=.cestudio.ai";
+              document.cookie =
+                name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+            }
+          });
+        }
         if (!stored) {
           setTimeout(function () {
             banner.classList.add("cookie-visible");
@@ -2330,14 +2351,16 @@
         document
           .getElementById("cookie-accept")
           .addEventListener("click", function () {
+            // Already granted by default — no consent update needed
             localStorage.setItem(CONSENT_KEY, "granted");
-            gtag("consent", "update", { analytics_storage: "granted" });
             hideBanner();
           });
         document
           .getElementById("cookie-decline")
           .addEventListener("click", function () {
+            gtag("consent", "update", { analytics_storage: "denied" });
             localStorage.setItem(CONSENT_KEY, "denied");
+            deleteAnalyticsCookies();
             hideBanner();
           });
       })();
